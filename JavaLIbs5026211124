@@ -1,0 +1,106 @@
+import javax.swing.JOptionPane;
+
+//bikin game javalibs pake JOption
+public class JavaLibs5026211124 {
+
+    
+    public static void main(String[] args) {
+    
+        // start menu
+
+        JOptionPane.showMessageDialog(null,
+                "Ini adalah ujian tulis tingkat akhir \"Kisatsutai\" atau Demon Slayer",
+                " Selamat datang di Hashira online writing test",
+                2);
+
+        int start = JOptionPane.showConfirmDialog(null, "apakah anata sudah siap?", "Pilih salah satu",
+                JOptionPane.YES_NO_OPTION);
+
+        // identitas
+
+        JOptionPane.showMessageDialog(null,
+                "Anata diminta untuk mengisi biodata, dimohon untuk mengisi sejujurnya",
+                "Hashira online writing test",
+                2);
+        String id1 = (String) JOptionPane.showInputDialog(null,
+                "anata bernama?",
+                "identitas",
+                3,
+                null,
+                null,
+                "watashi...");
+        String id2 = (String) JOptionPane.showInputDialog(null,
+                "berapa umur anata?",
+                "identitas",
+                3,
+                null,
+                null,
+                "watashi...");
+        String id3 = (String) JOptionPane.showInputDialog(null,
+                "berapa tinggi anata dalam satuan meter?",
+                "identitas",
+                3,
+                null,
+                null,
+                "watashi...");
+        String[] acceptableValues = { "FIRE", "WATER", "SUN", "THUNDER", "FLOWER" };
+        String id4 = (String) JOptionPane.showInputDialog(null,
+                "anata pengendali teknik pernafasan apa?",
+                "identitas",
+                3,
+                null,
+                acceptableValues,
+                acceptableValues[0]);
+
+        // membuat print terminal identitas yang sudah di parsed integer dan double
+        
+        System.out.println("Nama saya adalah " + id1);
+        System.out.println("Umur saya " + Integer.parseInt(id2) + " tahun.");
+        System.out.println("Tinggi saya sekitar " + Double.parseDouble(id3) + " meter.");
+        System.out.println("Saya pengendali teknik pernafasan " + id4);
+
+        //menampilan id pada jop
+        JOptionPane.showMessageDialog(null, 
+                    "Nama saya adalah " + id1 + "\n" + 
+                    "Umur saya " + Integer.parseInt(id2) + " tahun. \n" + 
+                    "Tinggi saya sekitar " + Double.parseDouble(id3) + " meter. \n" + 
+                    "Saya pengendali teknik pernafasan " + id4, 
+                    "Identitas", 
+                    1);
+
+        // UJIAN
+        JOptionPane.showMessageDialog(null,
+                "UJIAN AKAN DIMULAI! \n \"Seorang Kisatsutai harusnya mempunya tingkat kejujuran yang tinggi\" ",
+                "Hashira online writing test",
+                1);
+        String test1 = JOptionPane.showInputDialog("Berapa orang pengendali teknik pernafasan Matahari?");
+        String test2 = JOptionPane.showInputDialog("Berapa orang pengendali teknik pernafasan Air?");
+
+        // mau print math integer test1 + test2
+        System.out.println(Integer.parseInt(test1) + Integer.parseInt(test2));
+
+        String test3 = JOptionPane.showInputDialog("Berapa yen harga Nichirin buatan Urokodaki? \n \'rentang 0 dan 1 yen\'");
+        String test4 = JOptionPane.showInputDialog("Berapa jumlah Nichirin milik Inosuke?");
+
+        // mau print math double test3*test4
+        System.out.println(Double.parseDouble(test3) * Double.parseDouble(test4));
+
+        JOptionPane.showMessageDialog(null,
+                "UJIAN SELESAI! \n \"Seorang Kisatsutai harusnya mempunya tingkat kejujuran yang tinggi\" ",
+                "Hashira online writing test",
+                1);
+
+        // print semua input test
+        JOptionPane.showMessageDialog(null, 
+                    "jawaban saya: " + "\n" + "1. " + Integer.parseInt(test1) + Integer.parseInt(test2) + "\n" 
+                    + "2. " + Double.parseDouble(test3) * Double.parseDouble(test4), 
+                    "Hasil Tes", 
+                    1);
+
+        // end menu
+        JOptionPane.showMessageDialog(null,
+                "semoga hasil tes mu memuaskan, segera menjadi Hashira dan membasmi Demon di seluruh penjuru dunia!",
+                "Ganbatte calon Hashira!",
+                1);
+    }
+}
